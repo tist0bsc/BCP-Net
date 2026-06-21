@@ -1,0 +1,27 @@
+{
+  "num_classes": 2,
+  "input_channels": 3,
+  "device": "cuda:0",
+  "batch_size": 32,
+  "num_workers": 0,
+  "test_list": "data/S1GFlood/test.txt",
+  "dataset": {
+    "name": "S1GFlood",
+    "image_mode": "grayscale",
+    "label_mode": "binary",
+    "paired_input_mode": "stack_diff",
+    "normalization": {
+      "mean": [0.51808076, 0.46535794, 0.25270881],
+      "std": [0.24784168, 0.30490874, 0.19862935]
+    }
+  },
+  "loss": {
+    "tversky_weight": 0.5,
+    "tversky_alpha": 0.3,
+    "tversky_beta": 0.7,
+    "edge_weight": 0.2,
+    "edge_pos_weight": 4.0,
+    "boundary_width": 3
+  },
+  "save_dir": "saved/S1GFlood/BCP-Net"
+}
