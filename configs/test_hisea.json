@@ -1,0 +1,23 @@
+{
+  "num_classes": 2,
+  "input_channels": 1,
+  "device": "cuda:0",
+  "batch_size": 32,
+  "num_workers": 0,
+  "test_list": "data/HISEA/test.txt",
+  "dataset": {
+    "name": "HISEA",
+    "image_mode": "auto",
+    "label_mode": "auto",
+    "paired_input_mode": "stack"
+  },
+  "loss": {
+    "tversky_weight": 0.5,
+    "tversky_alpha": 0.3,
+    "tversky_beta": 0.7,
+    "edge_weight": 0.2,
+    "edge_pos_weight": 4.0,
+    "boundary_width": 3
+  },
+  "save_dir": "saved/HISEA/BCP-Net"
+}
